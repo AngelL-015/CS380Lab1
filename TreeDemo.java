@@ -100,13 +100,33 @@ class BinarySearchTree{
    
    
    
-   /*
-   a method to find the node in the tree
-   with a specific value
-   */
+   /**
+    * A method to find the node in the tree with a specific value.
+    * @param root is root node of sub(tree)
+    * @param key is the value searched
+    * @return boolean, true if key is found, else false
+    */
    public boolean find(Node root, int key){
-	  //implement me
-      return false;           
+	   
+	   // Base Case #1 - If Leaf Node is encountered, returns false.
+	   // Base Case #2 - If needed key is encountered, returns true.
+	   if (root == null) {
+		   return false;
+	   }
+	   if (root.value == key) {
+		   return true;
+	   }
+	   
+	   // Traverses tree recursively until the key is found
+	   // If key is < current node value, is in left subtree
+	   // If key is > current node value, is in right subtree
+	   if ( key < root.value ) {
+		   return find(root.left, key);
+	   } 
+	   else {
+		   return find(root.right, key); 
+	   }            
+   
    }
    
    
