@@ -37,11 +37,23 @@ class BinarySearchTree{
    
    
    
-   /*
-   pre-order traversal
-   */
+   /**
+    * A method to display BST in Pre-order Traversal.
+	* Visits nodes from root, left, and right recursively.
+    * @param root is root node of sub(tree)
+    */
    public void preOrderTraversal(Node root){
-      //implement me
+      
+	  // Base Case - Leaf node Encountered, returns nothing.
+	   if (root == null) {
+		   return;
+	   }
+	   
+	   // Order of traversal - Root, Left, Right
+	   System.out.print(root.value + " ");
+	   inOrderTraversal(root.left);
+	   inOrderTraversal(root.right);
+	   
    }
 
    
