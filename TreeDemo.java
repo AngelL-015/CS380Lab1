@@ -79,11 +79,23 @@ class BinarySearchTree{
    
    
    
-   /*
-   post-order traversal
-   */
+   /**
+    * A method to display BST in Post-order Traversal.
+	* Visit nodes from left, right, and root recursively.
+    * @param root is root node of sub(tree)
+    */
    public void postOrderTraversal(Node root){
-      //implement me
+	   
+	   // Base Case - Leaf node Encountered, returns nothing.
+	   if (root == null) {
+		   return;
+	   }
+	      
+	   // Order of traversal - Left, Right, Root
+	   inOrderTraversal(root.left);
+	   inOrderTraversal(root.right);
+	   System.out.print(root.value + " ");
+	   
    }
    
    
