@@ -217,8 +217,35 @@ public class TreeDemo{
       t1.insert(90);
       t1.insert(22);
             
-      System.out.print("in-order :   ");
+      // In-Order
+      System.out.print("in-order:   \t");
       t1.inOrderTraversal(t1.root);
+      System.out.println();
+      
+      // Pre-Order
+      System.out.print("pre-order:   \t");
+      t1.preOrderTraversal(t1.root);
+      System.out.println();
+      
+      // Post-Order 
+      System.out.print("post-order:   \t");
+      t1.postOrderTraversal(t1.root);
+      System.out.println();
+      
+      // Find()
+      System.out.print("Is key 90 found?\t" + t1.find(t1.root, 90));
+      System.out.println();
+      System.out.print("Is key 98 found?\t" + t1.find(t1.root, 98));
+      System.out.println();
+      
+      // Get Min
+      System.out.print("The Smallest node key is:\t" + t1.getMin(t1.root));
+      System.out.println();
+      
+      // Get Max
+      t1.delete(t1.root, 90);
+      t1.delete(t1.root, 80);
+      System.out.print("The Largest node key is:\t" + t1.getMax(t1.root));
       System.out.println();
            
       
