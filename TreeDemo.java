@@ -151,12 +151,20 @@ class BinarySearchTree{
   
   
   
-   /*
-   a method to find the node in the tree
-   with a largest key
-   */
+   /**
+    * A method to find the node in the tree with a largest key
+    * @param root is root node of sub(tree)
+    * @return largest key
+    */
    public int getMax(Node root){
-	  //implement me
+	  
+	  // Max key is located on the farthest right of a BST
+	  // Will recursively go to that point
+	  if (root.right == null) {
+		   return root.value;
+	  } else {
+		   return getMax(root.right);
+	  }
    }
    
    
